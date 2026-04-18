@@ -80,7 +80,7 @@ export default function LoginPage() {
             Ads that<br />actually<br /><span style={{ color: '#FF6B2B' }}>convert.</span>
           </div>
           <p style={{ fontSize: 15, color: '#999', lineHeight: 1.75, maxWidth: 400, fontWeight: 300 }}>
-            Deploy coupon campaigns across India's top e-commerce platforms. Track every rupee. Measure every result.
+            Deploy coupon campaigns across top e-commerce platforms worldwide. Track every sale. Measure every result.
           </p>
         </div>
 
