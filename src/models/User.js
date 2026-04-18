@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
   isActive: { type: Boolean, default: true },
   createdAt: { type: Date, default: Date.now },
   lastLogin: { type: Date },
+  pixelId: { type: String, unique: true, sparse: true },
 })
 
 export default mongoose.models.User || mongoose.model('User', UserSchema)
