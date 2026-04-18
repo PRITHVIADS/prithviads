@@ -100,9 +100,9 @@ export default function LoginPage() {
       {/* RIGHT PANEL */}
       <div style={S.right}>
         <div style={{ width: '100%', maxWidth: 360 }}>
-          <div style={{ fontSize: 10, color: '#FF6B2B', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 10 }}>Client Portal</div>
+          <div style={{ fontSize: 10, color: '#FF6B2B', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 10 }}>Admin & Client Portal</div>
           <div style={{ fontFamily: 'Syne, sans-serif', fontSize: 32, fontWeight: 800, color: '#fff', letterSpacing: -1, marginBottom: 4 }}>Welcome<br />back.</div>
-          <div style={{ fontSize: 13, color: '#999', marginBottom: 28, fontWeight: 300 }}>Sign in to your PADS dashboard</div>
+          <div style={{ fontSize: 13, color: '#999', marginBottom: 28, fontWeight: 300 }}>Sign in to your PADS account</div>
 
           <div style={{ display: 'flex', gap: 4, background: '#161616', border: '1px solid #222', borderRadius: 10, padding: 4, marginBottom: 22 }}>
             <button style={S.tab(mode==='login')} onClick={() => setMode('login')}>Sign In</button>
