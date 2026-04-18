@@ -1,4 +1,4 @@
-'use client'
+{ href: '/client/pixel', icon: '🎯', label: 'Pixel Setup' },'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { logout, getUser } from '@/lib/api'
@@ -17,6 +17,7 @@ const clientNav = [
   { href: '/client/deals', icon: '🏷️', label: 'My Deals' },
   { href: '/client/deals/new', icon: '+', label: 'New Deal' },
   { href: '/client/analytics', icon: '📊', label: 'Analytics' },
+{ href: '/client/pixel', icon: '🎯', label: 'Pixel Setup' },
 ]
 
 export default function Sidebar({ role }) {
