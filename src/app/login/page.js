@@ -130,6 +130,14 @@ export default function LoginPage() {
               <label style={S.label}>Password</label>
               <input style={S.input} type="password" placeholder="••••••••" value={form.password} onChange={f('password')} required />
             </div>
+            {mode === 'login' && (
+              <div style={{ textAlign: 'right', marginTop: 6, marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: '#FF6B2B', cursor: 'pointer', fontWeight: 500 }}
+                  onClick={() => alert('Contact support@prithviads.com to reset your password')}>
+                  Forgot password?
+                </span>
+              </div>
+            )}
 
             {error && <div style={{ color: '#FF6B2B', fontSize: 13, marginBottom: 12, padding: '10px 14px', background: 'rgba(255,107,43,0.08)', borderRadius: 8 }}>{error}</div>}
 
