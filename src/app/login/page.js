@@ -145,7 +145,7 @@ export default function LoginPage() {
           </div>
 
           <div style={{ marginTop: 24, fontSize: 11, color: '#444', textAlign: 'center', borderTop: '1px solid #1E1E1E', paddingTop: 18 }}>
-            © 2024 PADS · by PrithviAds
+            © 2026 PADS · by PrithviAds
           </div>
         </div>
       </div>
