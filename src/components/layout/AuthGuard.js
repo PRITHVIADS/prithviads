@@ -11,7 +11,7 @@ export default function AuthGuard({ children, requiredRole }) {
   useEffect(() => {
     async function check() {
       try {
-        const token = localStorage.getItem('prithviads_token')
+        const token = localStorage.getItem('pads_token')
         if (!token) { router.replace('/login'); return }
         const { user } = await api.me()
         if (requiredRole && user.role !== requiredRole) {
@@ -31,7 +31,7 @@ export default function AuthGuard({ children, requiredRole }) {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         <div style={{ width: 40, height: 40, background: 'var(--brand)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 20, color: '#fff' }}>P</div>
         <Spinner size={24} />
-        <div style={{ color: 'var(--text-muted)', fontSize: 13 }}>Loading PrithviAds...</div>
+        <div style={{ color: 'var(--text-muted)', fontSize: 13 }}>Loading PADS...</div>
       </div>
     </div>
   )

@@ -22,7 +22,7 @@ export async function POST(request) {
     }
 
     if (!user.isActive) {
-      return Response.json({ error: 'Account is deactivated. Contact PrithviAds support.' }, { status: 403 })
+      return Response.json({ error: 'Account is deactivated. Contact PADS support.' }, { status: 403 })
     }
 
     await User.findByIdAndUpdate(user._id, { lastLogin: new Date() })

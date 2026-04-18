@@ -57,7 +57,7 @@ export default function AdminDashboard() {
   return (
     <div style={{ padding: 32, maxWidth: 1200 }}>
       <ToastContainer />
-      <SectionHeader title="Admin Dashboard" subtitle="Overview of PrithviAds platform performance" />
+      <SectionHeader title="Admin Dashboard" subtitle="Overview of PADS platform performance" />
 
       {/* Stat grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 32 }}>

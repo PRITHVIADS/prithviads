@@ -31,7 +31,7 @@ export default function NewDealPage() {
         <div style={{ fontSize: 11, color: 'var(--brand)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>Client Portal</div>
         <h1 style={{ fontSize: 24, fontWeight: 900, marginBottom: 6 }}>Create New Deal</h1>
         <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>
-          Fill in your campaign details. The PrithviAds team will review and approve within 24–48 hours.
+          Fill in your campaign details. The PADS team will review and approve within 24–48 hours.
         </p>
       </div>
 
@@ -40,7 +40,7 @@ export default function NewDealPage() {
           <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
           <div style={{ fontSize: 22, fontWeight: 900, color: 'var(--success)', marginBottom: 10 }}>Deal Submitted!</div>
           <div style={{ color: 'var(--text-secondary)', fontSize: 15 }}>
-            The PrithviAds team will review your deal within <strong>24–48 hours</strong>.<br />
+            The PADS team will review your deal within <strong>24–48 hours</strong>.<br />
             You'll be able to track the status from your dashboard.
           </div>
           <div style={{ marginTop: 20, color: 'var(--text-muted)', fontSize: 13 }}>Redirecting to your deals...</div>

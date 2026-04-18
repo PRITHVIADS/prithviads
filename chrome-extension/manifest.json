@@ -1,19 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "PrithviAds — Smart Coupons",
+  "name": "PADS \u2014 Smart Coupons",
   "version": "1.0.0",
-  "description": "Automatically find and apply the best coupon codes on Travel, Education, E-commerce and Automobile websites.",
+  "description": "PADS automatically shows exclusive coupon codes while you shop on your favourite websites. Save money instantly.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "PrithviAds Coupons"
+    "default_title": "PADS Coupons"
   },
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "matches": [
+        "https://www.myntra.com/*",
+        "https://myntra.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
   ],
@@ -24,8 +29,7 @@
     "scripting"
   ],
   "host_permissions": [
-    "<all_urls>",
-    "http://127.0.0.1/*",
-    "http://localhost/*"
+    "https://www.myntra.com/*",
+    "https://myntra.com/*"
   ]
 }

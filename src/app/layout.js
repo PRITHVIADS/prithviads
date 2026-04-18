@@ -8,7 +8,7 @@ const sora = Sora({
 })
 
 export const metadata = {
-  title: 'PrithviAds — Smart Coupon Platform',
+  title: 'PADS — Smart Coupon Platform',
   description: 'Digital marketing coupon platform for Travel, Education, E-commerce and Automobile verticals',
 }
 

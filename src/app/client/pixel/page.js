@@ -7,7 +7,7 @@ export default function PixelSetupPage() {
   const [loading, setLoading] = useState(true)
   const [copied, setCopied] = useState('')
   const [tab, setTab] = useState('html')
-  const baseUrl = 'https://prithviads-zorz.vercel.app'
+  const baseUrl = 'https://pads-zorz.vercel.app'
 
   useEffect(() => {
     const user = getUser()
@@ -27,7 +27,7 @@ export default function PixelSetupPage() {
 
   const id = pixelId || '...'
   const htmlCode = '<script>(function(w,d){w._pvq=w._pvq||[];w._pvq.push(["init","' + id + '"]);var j=d.createElement("script");j.async=true;j.src="' + baseUrl + '/pixel.js";d.head.appendChild(j);})(window,document);</script>'
-  const shopifyCode = '{% comment %} PrithviAds {% endcomment %}<script>window._pvq=window._pvq||[];window._pvq.push(["init","' + id + '"]);</script><script src="' + baseUrl + '/pixel.js" async></script>'
+  const shopifyCode = '{% comment %} PADS {% endcomment %}<script>window._pvq=window._pvq||[];window._pvq.push(["init","' + id + '"]);</script><script src="' + baseUrl + '/pixel.js" async></script>'
   const gtmCode = '<script>window._pvq=window._pvq||[];window._pvq.push(["init","' + id + '"]);window._pvq.push(["track","PageView"]);</script>'
   const codes = { html: htmlCode, shopify: shopifyCode, gtm: gtmCode }
 

@@ -31,7 +31,7 @@ export default function Sidebar({ role }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 34, height: 34, background: 'var(--brand)', borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 16, color: '#fff', flexShrink: 0 }}>P</div>
           <div>
-            <div style={{ fontWeight: 900, fontSize: 14, color: 'var(--text-primary)' }}>PrithviAds</div>
+            <div style={{ fontWeight: 900, fontSize: 14, color: 'var(--text-primary)' }}>PADS</div>
             <div style={{ fontSize: 10, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{role === 'admin' ? 'Admin Panel' : 'Client Portal'}</div>
           </div>
         </div>

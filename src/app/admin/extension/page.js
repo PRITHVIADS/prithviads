@@ -63,7 +63,7 @@ export default function AdminExtensionPage() {
           <div style={{ flex: 1, background: '#111', border: '1px solid var(--dark-border)', borderRadius: 8, padding: '6px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ color: 'var(--success)', fontSize: 12 }}>🔒</span>
             <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>https://www.{url}</span>
-            {activeDeal && <span style={{ marginLeft: 'auto', color: 'var(--brand)', fontSize: 11, fontWeight: 700, background: 'rgba(255,107,43,0.1)', padding: '2px 8px', borderRadius: 20 }}>● PrithviAds Active</span>}
+            {activeDeal && <span style={{ marginLeft: 'auto', color: 'var(--brand)', fontSize: 11, fontWeight: 700, background: 'rgba(255,107,43,0.1)', padding: '2px 8px', borderRadius: 20 }}>● PADS Active</span>}
           </div>
           <div style={{ display: 'flex', gap: 6 }}>
             {['product', 'cart', 'checkout'].map(p => (
@@ -131,7 +131,7 @@ export default function AdminExtensionPage() {
               <div style={{ background: 'var(--brand)', padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span>🏷️</span>
-                  <span style={{ fontWeight: 800, fontSize: 13, color: '#fff' }}>PrithviAds Deal!</span>
+                  <span style={{ fontWeight: 800, fontSize: 13, color: '#fff' }}>PADS Deal!</span>
                 </div>
                 <div style={{ fontSize: 11, background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 20, color: '#fff', fontWeight: 700 }}>LIVE</div>
               </div>
@@ -156,7 +156,7 @@ export default function AdminExtensionPage() {
                     💡 Go to checkout to auto-apply
                   </div>
                 )}
-                <div style={{ fontSize: 10, color: 'var(--text-muted)', textAlign: 'center', marginTop: 8 }}>Valid till {activeDeal.validTo?.slice(0, 10)} · Powered by PrithviAds</div>
+                <div style={{ fontSize: 10, color: 'var(--text-muted)', textAlign: 'center', marginTop: 8 }}>Valid till {activeDeal.validTo?.slice(0, 10)} · Powered by PADS</div>
               </div>
             </div>
           )}
