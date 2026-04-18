@@ -55,7 +55,7 @@ export default function LoginPage() {
             boxShadow: '0 0 40px rgba(255,107,43,0.3)',
           }}>P</div>
           <h1 style={{ fontSize: 28, fontWeight: 900, marginBottom: 6 }}>PADS</h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>Smart Coupon Platform for Digital Marketing</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>Smart Coupon Platform for Advertisers</p>
         </div>
 
         {/* Card */}
@@ -142,7 +142,7 @@ export default function LoginPage() {
         </div>
 
         <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: 12, marginTop: 20 }}>
-          © 2024 PADS · Digital Marketing Platform
+          © 2024 PADS · by PrithviAds
         </p>
       </div>
     </div>
