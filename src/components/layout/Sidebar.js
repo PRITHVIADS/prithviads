@@ -1,4 +1,24 @@
-{ href: '/client/pixel', icon: '🎯', label: 'Pixel Setup' },'use client'
+'use client'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import { logout, getUser } from '@/lib/api'
+import { useState, useEffect } from 'react'
+
+const adminNav = [
+  { href: '/admin', icon: '▦', label: 'Dashboard' },
+  { href: '/admin/deals', icon: '🏷️', label: 'Deal Approvals' },
+  { href: '/admin/clients', icon: '🏢', label: 'Clients' },
+  { href: '/admin/analytics', icon: '📊', label: 'Analytics' },
+  { href: '/admin/extension', icon: '🔌', label: 'Extension Preview' },
+]
+
+const clientNav = [
+  { href: '/client', icon: '▦', label: 'Dashboard' },
+  { href: '/client/deals', icon: '🏷️', label: 'My Deals' },
+  { href: '/client/deals/new', icon: '+', label: 'New Deal' },
+  {
+cat > src/components/layout/Sidebar.js << 'EOF'
+'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { logout, getUser } from '@/lib/api'
@@ -17,7 +37,7 @@ const clientNav = [
   { href: '/client/deals', icon: '🏷️', label: 'My Deals' },
   { href: '/client/deals/new', icon: '+', label: 'New Deal' },
   { href: '/client/analytics', icon: '📊', label: 'Analytics' },
-{ href: '/client/pixel', icon: '🎯', label: 'Pixel Setup' },
+  { href: '/client/pixel', icon: '🎯', label: 'Pixel Setup' },
 ]
 
 export default function Sidebar({ role }) {
@@ -29,7 +49,6 @@ export default function Sidebar({ role }) {
 
   return (
     <div className="sidebar">
-      {/* Logo */}
       <div style={{ padding: '24px 20px', borderBottom: '1px solid var(--dark-border)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{
@@ -46,7 +65,6 @@ export default function Sidebar({ role }) {
         </div>
       </div>
 
-      {/* Navigation */}
       <nav style={{ padding: '12px 12px', flex: 1 }}>
         <div style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', padding: '8px 8px 4px' }}>
           Navigation
@@ -71,7 +89,6 @@ export default function Sidebar({ role }) {
         })}
       </nav>
 
-      {/* User info + logout */}
       <div style={{ padding: 16, borderTop: '1px solid var(--dark-border)' }}>
         {user && (
           <div style={{ marginBottom: 12 }}>
