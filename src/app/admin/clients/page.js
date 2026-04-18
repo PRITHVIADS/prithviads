@@ -7,6 +7,9 @@ import { useToast } from '@/components/ui'
 export default function AdminClientsPage() {
   const [clients, setClients] = useState([])
   const [loading, setLoading] = useState(true)
+  const [resetModal, setResetModal] = useState(null)
+  const [newPassword, setNewPassword] = useState('')
+  const [resetting, setResetting] = useState(false)
   const { add, ToastContainer } = useToast()
 
   async function load() {
@@ -25,6 +28,22 @@ export default function AdminClientsPage() {
       setClients(p => p.map(c => c._id === clientId ? { ...c, isActive } : c))
       add(`Client ${isActive ? 'activated' : 'deactivated'}`, 'success')
     } catch (err) { add(err.message, 'error') }
+  }
+
+  async function resetPassword() {
+    if (!newPassword || newPassword.length < 6) return add('Password must be at least 6 characters', 'error')
+    setResetting(true)
+    try {
+      const res = await fetch('/api/clients/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clientId: resetModal._id, newPassword })
+      })
+      const data = await res.json()
+      if (data.success) { add('Password reset successfully!', 'success'); setResetModal(null); setNewPassword('') }
+      else add(data.error, 'error')
+    } catch(e) { add(e.message, 'error') }
+    finally { setResetting(false) }
   }
 
   return (
@@ -112,6 +131,29 @@ export default function AdminClientsPage() {
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Reset Password Modal */}
+      {resetModal && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
+          <div style={{ background: 'var(--dark-card)', border: '1px solid var(--dark-border)', borderRadius: 16, padding: 32, width: 400 }}>
+            <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text-primary)', marginBottom: 6 }}>Reset Password</div>
+            <div style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24 }}>Set new password for <strong style={{color:'var(--brand)'}}>{resetModal.name}</strong></div>
+            <input
+              type="password"
+              placeholder="New password (min 6 chars)"
+              value={newPassword}
+              onChange={e => setNewPassword(e.target.value)}
+              style={{ width: '100%', background: 'var(--dark-card2)', border: '1px solid var(--dark-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text-primary)', fontSize: 14, outline: 'none', marginBottom: 16 }}
+            />
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button onClick={() => { setResetModal(null); setNewPassword('') }} style={{ flex: 1, padding: '10px', background: 'transparent', border: '1px solid var(--dark-border)', borderRadius: 8, color: 'var(--text-muted)', cursor: 'pointer', fontWeight: 600 }}>Cancel</button>
+              <button onClick={resetPassword} disabled={resetting} style={{ flex: 1, padding: '10px', background: 'var(--brand)', border: 'none', borderRadius: 8, color: '#fff', cursor: 'pointer', fontWeight: 700 }}>
+                {resetting ? 'Resetting...' : 'Reset Password'}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
