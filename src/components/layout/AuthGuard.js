@@ -11,7 +11,7 @@ export default function AuthGuard({ children, requiredRole }) {
   useEffect(() => {
     async function check() {
       try {
-        const token = localStorage.getItem('pads_token')
+        const token = localStorage.getItem('prithviads_token')
         if (!token) { router.replace('/login'); return }
         const { user } = await api.me()
         if (requiredRole && user.role !== requiredRole) {
