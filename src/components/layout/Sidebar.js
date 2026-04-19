@@ -10,6 +10,7 @@ const adminNav = [
   { href: '/admin/clients', icon: '\uD83C\uDFE2', label: 'Clients' },
   { href: '/admin/analytics', icon: '\uD83D\uDCCA', label: 'Analytics' },
   { href: '/admin/extension', icon: '\uD83D\uDD0C', label: 'Extension Preview' },
+  { href: '/admin/pixel', icon: '\uD83D\uDFAF', label: 'Pixel' },
 ]
 
 const clientNav = [
